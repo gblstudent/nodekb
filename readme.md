@@ -36,3 +36,8 @@ Part-02-Begin : Response formatting & Basic error
 
 ### Part-02-End 
 Part-02-End : Middleware
+
+### Part-03-End 
+Part-03-End : Controller
+- Moving end points to controller
+- Ordering of end points matter

@@ -2,6 +2,8 @@
 Get http://localhost:5000
 ###
 
+# ----------------------------- Invalid URL ------------------------------
+
 ###
 Get http://localhost:5000/hi
 ###
@@ -12,4 +14,22 @@ Get http://localhost:5000/hi/nodejs
 
 ###
 Get http://localhost:5000/err
+###
+
+# ----------------------------- END Invalid URL ------------------------------
+
+###
+Get http://localhost:5000/api/v1/basic01
+###
+
+###
+Get http://localhost:5000/api/v1/basic01/express
+###
+
+###
+Get http://localhost:5000/api/v1/basic01/err
+###
+
+###
+Get http://localhost:5000/api/v1/basic01/err2
 ###
