@@ -27,6 +27,14 @@ app.get('/err', (req, res) => {
     throw new Error('Err');
 });
 
+app.use(function (err, req, res, next) {
+    res.status(500).send({
+        'success' : false,
+        'message' : 'Internal Error Occured'
+    });
+    console.log(`${req.method} Request for ${req.url} with ${JSON.stringify(req.body)} and response ${res.statusCode} with error ${err.stack}`);      
+});
+
 app.listen(5000, () => {
     console.log(`Server listening on port 5000`);  
 });
