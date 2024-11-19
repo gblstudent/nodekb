@@ -51,10 +51,11 @@ app.use(function(req, res) {
 });
 
 mySqlPool.query("select 1").then( () => {
-    console.log("Database WORKING");
-    app.listen(envport, () => {
-        console.log(`Server listening on port ${envport} with ${envname} config`);  
-      });
+    console.log("Database WORKING");    
 }).catch( (err) => {
     console.log(err);
+});
+
+app.listen(envport, () => {
+    console.log(`Server listening on port ${envport} with ${envname} config`);  
 });

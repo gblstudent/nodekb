@@ -70,3 +70,6 @@ Part-06-End : MySQL CURD Operations
 
 ### Part-07-End 
 Part-07-End : Async Middleware
+
+### Part-08-End 
+Part-08-End : DB & In Memory separation from server loading
