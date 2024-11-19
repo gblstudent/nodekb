@@ -67,3 +67,6 @@ Part-06-End : MySQL CURD Operations
 - GET       :   Read
 - PUT       :   Update
 - Delete    :   Delete
+
+### Part-07-End 
+Part-07-End : Async Middleware

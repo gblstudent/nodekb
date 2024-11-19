@@ -15,7 +15,7 @@ app.use(cors());
 app.use(compression());
 app.use(helmet());
 app.use(morgan('combined', { stream: winston.stream }));
-
+var API_MSG = require('./app/lang');
 var basic01 = require('./app/controller/Basic01');
 var basic02 = require('./app/controller/Basic02');
 var basic03 = require('./app/controller/Basic03');
@@ -37,7 +37,7 @@ app.use('/api/v2/blogs', basic03);
 app.use(function (err, req, res, next) {
     res.status(500).send({
         'success' : false,
-        'message' : 'Internal Error Occured'
+        'message' : API_MSG.ERROR.E500
     });
     console.log(`${req.method} Request for ${req.url} with ${JSON.stringify(req.body)} and response ${res.statusCode} with error ${err.stack}`);      
 });
@@ -45,8 +45,9 @@ app.use(function (err, req, res, next) {
 app.use(function(req, res) {
     res.status(404).send({
         'success' : false,
-        'message' : 'Not Found'
+        'message' : API_MSG.ERROR.E404
     });
+    console.log(`${req.method} Request for ${req.url} with ${JSON.stringify(req.body)} and response ${res.statusCode}`);      
 });
 
 mySqlPool.query("select 1").then( () => {
