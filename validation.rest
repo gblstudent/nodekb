@@ -1,3 +1,11 @@
 ###
 Get http://localhost:5000
 ###
+
+###
+Get http://localhost:5000/hi
+###
+
+###
+Get http://localhost:5000/hi/nodejs
+###
