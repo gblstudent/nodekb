@@ -18,6 +18,7 @@ app.use(morgan('combined', { stream: winston.stream }));
 
 var basic01 = require('./app/controller/Basic01');
 var basic02 = require('./app/controller/Basic02');
+var basic03 = require('./app/controller/Basic03');
 
 const envport = process.env.PORT || 9999
 const envname = process.env.NODE_ENV || 'CODE'
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1/basic01', basic01);
 app.use('/api/v1/blogs', basic02);
+app.use('/api/v2/blogs', basic03);
 
 app.use(function (err, req, res, next) {
     res.status(500).send({

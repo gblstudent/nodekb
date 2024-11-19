@@ -60,3 +60,10 @@ Part-06-Begin : MySQL setup
 ```
 npm i mysql2
 ```
+
+### Part-06-End 
+Part-06-End : MySQL CURD Operations
+- POST      :   Create
+- GET       :   Read
+- PUT       :   Update
+- Delete    :   Delete
