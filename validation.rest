@@ -9,3 +9,7 @@ Get http://localhost:5000/hi
 ###
 Get http://localhost:5000/hi/nodejs
 ###
+
+###
+Get http://localhost:5000/err
+###
