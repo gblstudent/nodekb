@@ -41,3 +41,12 @@ Part-02-End : Middleware
 Part-03-End : Controller
 - Moving end points to controller
 - Ordering of end points matter
+
+### Part-04-End 
+Part-04-End : Library Setup 
+
+```
+npm i body-parser crypto winston morgan helmet cors compression app-root-path dotenv
+```
+- Env value setup
+- Log setup

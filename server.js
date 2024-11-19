@@ -1,7 +1,24 @@
+require('dotenv').config();
+var morgan = require('morgan');
+var winston = require('./app/config/winston');
+var cors = require('cors');
+var compression = require('compression');
+var helmet = require('helmet');
+
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+app.use(bodyParser.json());
+app.use(cors());
+app.use(compression());
+app.use(helmet());
+app.use(morgan('combined', { stream: winston.stream }));
+
 var basic01 = require('./app/controller/Basic01');
+
+const envport = process.env.PORT || 9999
+const envname = process.env.NODE_ENV || 'CODE'
 
 app.get('/', (req, res) => {
     res.status(200).send({
@@ -27,6 +44,6 @@ app.use(function(req, res) {
     });
 });
 
-app.listen(5000, () => {
-    console.log(`Server listening on port 5000`);  
+app.listen(envport, () => {
+    console.log(`Server listening on port ${envport} with ${envname}`);  
 });
