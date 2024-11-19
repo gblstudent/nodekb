@@ -33,3 +33,25 @@ Get http://localhost:5000/api/v1/basic01/err
 ###
 Get http://localhost:5000/api/v1/basic01/err2
 ###
+
+###
+Get http://localhost:5000/api/v1/blogs
+###
+
+###
+POST http://localhost:5000/api/v1/blogs
+Content-Type: application/json
+
+{
+    "title" : "Test 1"
+}
+###
+
+###
+POST http://localhost:5000/api/v1/blogs
+Content-Type: application/json
+
+{
+    "title" : "Test 2"
+}
+###
