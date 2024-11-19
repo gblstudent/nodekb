@@ -29,7 +29,7 @@ Part-00-End : Initial Node - Express Code
 Part-01-End : Basic Routing parameter
 
 ### Part-02-Begin 
-Part-02-End : Response formatting & Basic error
+Part-02-Begin : Response formatting & Basic error
 - Status Code
 - Json Response 
 - Basic Error
