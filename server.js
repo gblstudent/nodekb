@@ -7,6 +7,7 @@ var helmet = require('helmet');
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const mySqlPool = require('./app/config/db');
 
 const app = express();
 app.use(bodyParser.json());
@@ -46,6 +47,11 @@ app.use(function(req, res) {
     });
 });
 
-app.listen(envport, () => {
-    console.log(`Server listening on port ${envport} with ${envname}`);  
+mySqlPool.query("select 1").then( () => {
+    console.log("Database WORKING");
+    app.listen(envport, () => {
+        console.log(`Server listening on port ${envport} with ${envname} config`);  
+      });
+}).catch( (err) => {
+    console.log(err);
 });

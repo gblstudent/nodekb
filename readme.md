@@ -53,3 +53,10 @@ npm i body-parser crypto winston morgan helmet cors compression app-root-path do
 
 ### Part-05-End 
 Part-05-End : POST Request
+
+### Part-06-Begin 
+Part-06-Begin : MySQL setup
+
+```
+npm i mysql2
+```
